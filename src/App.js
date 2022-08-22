@@ -71,7 +71,14 @@ export default function App() {
       </div>
       <footer>
         <small>
-          <a href="/">Open source code</a> by Amanda
+          <a
+            href="https://github.com/amandaasmac/weather-react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open source code
+          </a>{" "}
+          by Amanda
         </small>
       </footer>
     </div>
