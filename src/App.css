@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+.App h1 {
+  font-size: 2.3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h2 {
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .app-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(235, 241, 255, 0.4);
+  padding: 60px 15px 30px;
+  margin: 30px auto 5px;
+  border-radius: 15px;
+  max-width: 560px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.App .unit-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.App .search-form {
+  width: 100%;
+  max-width: 500px;
+  align-self: center;
+  display: flex;
+  margin-block-end: 7px;
+}
+
+.App .search-input {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 10px;
+  color: var(--melon);
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--ghost-white);
+  background-clip: padding-box;
+  border: 1px solid var(--amaranth-pink);
+  border-radius: 12px 0 0 12px;
+}
+
+.App .search-input::placeholder {
+  color: var(--amaranth-pink);
+}
+
+.App button,
+.App input[type="submit"] {
+  transition: all 0.25s ease-in-out;
+}
+
+.App button:hover,
+.App input[type="submit"]:hover,
+.App a:hover {
+  cursor: pointer;
+}
+
+.App .search-button {
+  margin-left: -1px;
+  padding: 10px 20px;
+  border-radius: 0 12px 12px 0;
+  font-size: 1.1rem;
+}
+
+.App .search-button,
+.App .unit-switch {
+  background-color: var(--amaranth-pink);
   color: white;
+  border: 1px solid var(--amaranth-pink);
 }
 
-.App-link {
-  color: #61dafb;
+.App .search-button:hover,
+.App .unit-switch:hover {
+  background-color: var(--melon);
+  border-color: var(--melon);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-container .use-device-button {
+  font-size: 1rem;
+  width: fit-content;
+  align-self: center;
+  border: none;
+  background: transparent;
+  color: var(--amaranth-pink);
+  text-shadow: 0.2px 0.2px white;
+}
+
+.App .use-device-button:hover {
+  color: var(--melon);
+}
+
+@media screen and (min-width: 450px) {
+  .App .search-form {
+    padding-inline: 15px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.App main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  padding: 2rem 0 4rem;
+}
+
+.App .today-description,
+.App .today-min-max {
+  font-size: 1.2rem;
+}
+
+.App .today-description:first-letter {
+  text-transform: capitalize;
+}
+
+.App .today-min-max,
+.App .today-details,
+.App .current-dayandtime {
+  margin-block-start: 0.5rem;
+}
+
+.App .max-temp {
+  font-weight: 600;
+}
+
+.App .today-details,
+.App .current-dayandtime {
+  font-size: 0.9rem;
+}
+
+.App img {
+  width: 90%;
+}
+
+@media screen and (min-width: 450px) {
+  .App .app-container {
+    padding-inline: 30px;
   }
+
+  .App main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .App .weather-image {
+    text-align: right;
+  }
+}
+
+.App footer {
+  text-align: center;
+  color: var(--amaranth-pink);
+  margin-block-end: 10px;
+}
+
+.App footer a {
+  color: var(--ghost-white);
+  text-decoration: none;
 }
